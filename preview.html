@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>韓国居酒屋 古里屋 秋葉原店 - プレビュー</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="config.js" type="module"></script>
+    <script src="meta.js" type="module"></script>
+    <script src="covid-notice.js" type="module"></script>
+    <script src="takeout.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+
+    <!-- Preview styles -->
+    <style>
+        .preview-header {
+            background: #f8f8f8;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .preview-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .preview-button {
+            background: #B70000;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .preview-button:hover {
+            background: #940000;
+        }
+
+        .preview-select {
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            border: 1px solid #ddd;
+        }
+
+        .preview-frame {
+            margin-top: 60px;
+            width: 100%;
+            height: calc(100vh - 60px);
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .preview-controls {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preview Header -->
+    <header class="preview-header">
+        <div class="preview-controls">
+            <div>
+                <select class="preview-select" id="viewportSelect">
+                    <option value="desktop">Desktop (1920px)</option>
+                    <option value="laptop">Laptop (1366px)</option>
+                    <option value="tablet">Tablet (768px)</option>
+                    <option value="mobile">Mobile (375px)</option>
+                </select>
+            </div>
+            
+            <div>
+                <button class="preview-button" onclick="location.reload()">リロード</button>
+                <button class="preview-button" onclick="toggleDevTools()">Dev Tools</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Include the actual website content here -->
+        <iframe src="index.html" class="preview-frame" id="previewFrame"></iframe>
+    </main>
+
+    <script>
+        // Viewport handling
+        const viewportSelect = document.getElementById('viewportSelect');
+        const previewFrame = document.getElementById('previewFrame');
+
+        const viewportSizes = {
+            desktop: '1920px',
+            laptop: '1366px',
+            tablet: '768px',
+            mobile: '375px'
+        };
+
+        viewportSelect.addEventListener('change', (e) => {
+            previewFrame.style.width = viewportSizes[e.target.value];
+            previewFrame.style.margin = '60px auto 0';
+            previewFrame.style.display = 'block';
+        });
+
+        // Dev Tools toggle
+        const toggleDevTools = () => {
+            // You would implement your dev tools functionality here
+            console.log('Dev Tools toggled');
+        };
+
+        // Performance monitoring
+        window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log('Total load time:', timing.loadEventEnd - timing.navigationStart);
+        });
+
+        // Error tracking
+        window.onerror = (msg, url, line) => {
+            console.error(`Error: ${msg}\nURL: ${url}\nLine: ${line}`);
+        };
+    </script>
+</body>
+</html>

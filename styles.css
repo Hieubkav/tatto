@@ -1,0 +1,244 @@
+/* Custom styles for Koriya website */
+
+/* Font settings */
+@font-face {
+    font-family: 'Yu Gothic';
+    src: local('Yu Gothic Medium');
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Yu Gothic', 'Noto Sans JP', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    z-index: 1000;
+}
+
+.logo-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.logo-subtitle {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* Navigation styles */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #B70000;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero section */
+.hero-overlay {
+    background: linear-gradient(90deg, 
+        rgba(0,0,0,0.7) 0%, 
+        rgba(0,0,0,0.3) 50%, 
+        rgba(0,0,0,0) 100%
+    );
+}
+
+/* Menu items */
+.menu-item {
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-image {
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover .menu-image {
+    transform: scale(1.05);
+}
+
+/* Reservation calendar */
+.calendar-cell {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid #eee;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.calendar-cell:hover {
+    background: #f8f8f8;
+}
+
+.calendar-cell.available {
+    color: #B70000;
+}
+
+.calendar-cell.unavailable {
+    color: #999;
+}
+
+/* Restaurant photos */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.photo-item img {
+    transition: transform 0.5s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B70000;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #940000;
+}
+
+/* Button styles */
+.btn-primary {
+    background: #B70000;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: #940000;
+    transform: translateY(-2px);
+}
+
+/* Map container */
+.map-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+    
+    .header-fixed {
+        position: relative;
+    }
+}
+
+/* Language selector */
+.lang-selector {
+    position: relative;
+}
+
+.lang-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
+    min-width: 120px;
+    display: none;
+}
+
+.lang-selector:hover .lang-list {
+    display: block;
+}
+
+.lang-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.lang-item:hover {
+    background: #f8f8f8;
+}
+
+/* SNS icons */
+.sns-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.sns-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.sns-icon:hover {
+    transform: scale(1.1);
+}
