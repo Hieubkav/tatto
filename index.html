@@ -1,234 +1,100 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>韓国居酒屋 古里屋 秋葉原店</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Trung Đìa Tattoo - Studio Xăm Hình Nghệ Thuật Tại Cần Thơ</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Trung Đìa Tattoo - Studio xăm hình nghệ thuật chuyên nghiệp tại Cần Thơ. Dịch vụ xăm hình, xóa xăm, vô bi độ súng và đào tạo học viên.">
+    <meta name="keywords" content="xăm hình, tattoo, xóa xăm, vô bi độ súng, studio xăm, Cần Thơ, đào tạo xăm">
+    <meta name="author" content="Trung Đìa Tattoo">
+    <meta property="og:title" content="Trung Đìa Tattoo - Studio Xăm Hình Nghệ Thuật Tại Cần Thơ">
+    <meta property="og:description" content="Studio xăm hình nghệ thuật chuyên nghiệp tại Cần Thơ. Dịch vụ xăm hình, xóa xăm an toàn, vô bi độ súng và đào tạo học viên.">
+    <meta property="og:image" content="https://trungdiatattoo.vn/wp-content/uploads/2021/09/cropped-unnamed-32x32.jpg">
+    <meta property="og:url" content="https://trungdiatattoo.vn">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://trungdiatattoo.vn/wp-content/uploads/2021/09/cropped-unnamed-32x32.jpg">
+    
+    <!-- Tailwind CSS and Flowbite -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="scripts.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Fixed Header -->
-    <header class="header-fixed">
-        <div class="container mx-auto px-4">
-            <div class="flex items-center justify-between py-4">
-                <a href="/" class="flex items-center space-x-3">
-                    <img src="https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/m8nukshu/20518263/vk5v_w140h140.jpg" alt="古里屋" class="w-16 h-16 rounded-full">
-                    <div>
-                        <h1 class="logo-title">韓国居酒屋 古里屋 秋葉原店</h1>
-                        <p class="logo-subtitle">かんこくいざかや こりや あきはばらてん</p>
-                    </div>
-                </a>
-
-                <div class="flex items-center space-x-6">
-                    <div class="text-right hidden md:block">
-                        <p class="text-sm">ご予約・お問い合わせ</p>
-                        <p class="text-xl font-bold">03-3526-2338</p>
-                    </div>
-                    
-                    <a href="#reservation" class="btn-primary">
-                        ネット予約
-                    </a>
-
-                    <div class="lang-selector">
-                        <button class="flex items-center space-x-1">
-                            <span>JP</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path d="M19 9l-7 7-7-7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <ul class="lang-list">
-                            <li class="lang-item">日本語</li>
-                            <li class="lang-item">English</li>
-                            <li class="lang-item">한국어</li>
-                            <li class="lang-item">中文(繁体)</li>
-                            <li class="lang-item">中文(简体)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation -->
-            <nav class="border-t border-gray-200 hidden md:block">
-                <ul class="flex justify-center space-x-8 py-4">
-                    <li><a href="#" class="nav-link">ホーム</a></li>
-                    <li><a href="#menu" class="nav-link">メニュー</a></li>
-                    <li><a href="#takeout" class="nav-link">テイクアウト</a></li>
-                    <li><a href="#seats" class="nav-link">お席</a></li>
-                    <li><a href="#gallery" class="nav-link">写真</a></li>
-                    <li><a href="#coupon" class="nav-link">クーポン</a></li>
-                    <li><a href="#access" class="nav-link">アクセス</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section with Slider -->
-    <section class="hero-section pt-24">
-        <div class="relative h-[600px] overflow-hidden">
-            <div class="hero-slider">
-                <div class="hero-slide active">
-                    <img src="https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/m8nukshu/20518301/2ejd_.png" alt="メイン画像" class="w-full h-full object-cover">
-                    <div class="hero-overlay absolute inset-0"></div>
-                    <div class="absolute bottom-10 left-10 text-white">
-                        <h2 class="text-4xl font-bold mb-4">2時間飲み放題付コース</h2>
-                        <p class="text-xl">2,900円～</p>
-                    </div>
-                </div>
-                <!-- Additional slides here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Reservation Calendar -->
-    <section id="reservation" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-center mb-12">
-                <span class="block text-3xl font-bold tracking-wide">RESERVATION</span>
-                <span class="text-sm text-gray-600">ネット予約の空席状況</span>
-            </h2>
-
-            <div class="bg-white rounded-lg shadow-lg p-8 max-w-4xl mx-auto">
-                <div class="calendar-grid grid grid-cols-7 gap-2 mb-8">
-                    <!-- Calendar will be populated by JavaScript -->
-                </div>
-
-                <div class="reservation-form space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">予約日</label>
-                            <input type="date" class="w-full border rounded-lg p-3">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">人数</label>
-                            <select class="w-full border rounded-lg p-3">
-                                <option>2名</option>
-                                <option>3名</option>
-                                <option>4名</option>
-                                <!-- More options -->
-                            </select>
-                        </div>
-                    </div>
-                    
-                    <button type="submit" class="w-full btn-primary py-4">
-                        この内容で予約する
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Recommended Menu -->
-    <section id="menu" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-center mb-12">
-                <span class="block text-3xl font-bold tracking-wide">SPECIALS</span>
-                <span class="text-sm text-gray-600">おすすめ料理</span>
-            </h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Menu items from the original site -->
-                <div class="menu-item fade-in">
-                    <div class="overflow-hidden rounded-lg mb-4">
-                        <img src="https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/m8nukshu/20518471/gwb8_w1140h600.jpg" 
-                             alt="チーズタッカルビコース" 
-                             class="menu-image w-full">
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">チーズタッカルビコース＜全9品＞</h3>
-                    <p class="text-primary font-bold mb-2">3,800円(税込)</p>
-                    <p class="text-gray-600">今話題！焼肉古里屋特製のチーズタッカルビが食べられるコースです。2時間飲み放題付き！</p>
-                </div>
-                <!-- More menu items -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Restaurant Interior -->
-    <section id="interior" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-center mb-12">
-                <span class="block text-3xl font-bold tracking-wide">ATMOSPHERE</span>
-                <span class="text-sm text-gray-600">店内の雰囲気</span>
-            </h2>
-
-            <div class="photo-grid">
-                <!-- Interior photos -->
-                <div class="photo-item">
-                    <img src="https://cdn.r-corona.jp/prd.rb.r-corona.jp/assets/site_files/m8nukshu/20518320/o1pl_w1140h600.jpg" 
-                         alt="座敷">
-                    <div class="photo-caption">
-                        <p>最大40名様までのお座敷</p>
-                    </div>
-                </div>
-                <!-- More photos -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Access Map -->
-    <section id="access" class="py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-center mb-12">アクセス</h2>
-            
-            <div class="map-container mb-8">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0479146366625!2d139.77187561525905!3d35.69772483019275!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c1d6fb74df3%3A0x4b2f4b452b2f102!2z6Zi_5Zu95YWt6YWS5bGL5Y-k6YeM5bGL56S-6L6y6JED5bqX!5e0!3m2!1sja!2sjp!4v1661799058800!5m2!1sja!2sjp"
-                    allowfullscreen=""
-                    loading="lazy">
-                </iframe>
-            </div>
-
-            <div class="max-w-2xl mx-auto">
-                <dl class="grid grid-cols-4 gap-4">
-                    <dt class="font-bold">住所</dt>
-                    <dd class="col-span-3">東京都千代田区神田佐久間町１-1-15 川初ビル4F</dd>
-                    
-                    <dt class="font-bold">アクセス</dt>
-                    <dd class="col-span-3">秋葉原駅より徒歩1分</dd>
-                    
-                    <dt class="font-bold">電話番号</dt>
-                    <dd class="col-span-3">03-3526-2338</dd>
-                    
-                    <dt class="font-bold">営業時間</dt>
-                    <dd class="col-span-3">
-                        月～日、祝日、祝前日: 11:30～15:00<br>
-                        17:00～23:00
-                    </dd>
-                </dl>
-            </div>
-        </div>
-    </section>
+<body class="bg-black text-white">
+    <!-- Include components -->
+    <div w3-include-html="components/header.html"></div>
+    <div w3-include-html="components/hero.html"></div>
+    <div w3-include-html="components/gallery.html"></div>
+    <div w3-include-html="components/services.html"></div>
+    <div w3-include-html="components/contact.html"></div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 py-8">
         <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-2 gap-8 mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-lg font-bold mb-4">韓国居酒屋 古里屋 秋葉原店</h3>
-                    <address class="not-italic">
-                        〒101-0025<br>
-                        東京都千代田区神田佐久間町１-1-15 川初ビル4F
-                    </address>
+                    <h3 class="text-xl font-bold mb-4">TRUNG ĐÌA TATTOO</h3>
+                    <p>Studio xăm hình nghệ thuật chuyên nghiệp tại Cần Thơ</p>
                 </div>
-                
-                <div class="text-right">
-                    <div class="sns-icons justify-end">
-                        <a href="#" class="sns-icon">
-                            <img src="path-to-facebook-icon.png" alt="Facebook">
-                        </a>
-                        <a href="#" class="sns-icon">
-                            <img src="path-to-twitter-icon.png" alt="Twitter">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Giờ làm việc</h3>
+                    <p>Tất cả các ngày: 8:00 - 21:00</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Kết nối với chúng tôi</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/trungdiatattoo" target="_blank" class="text-white hover:text-gray-400">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            </svg>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center text-sm">
-                <p>&copy; 2024 韓国居酒屋 古里屋 秋葉原店 All Rights Reserved.</p>
+            <div class="mt-8 text-center">
+                <p>&copy; 2024 Trung Đìa Tattoo. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    
+    <!-- Include HTML Components -->
+    <script>
+    function includeHTML() {
+        var z, i, elmnt, file, xhttp;
+        z = document.getElementsByTagName("*");
+        for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+                xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                        if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                        elmnt.removeAttribute("w3-include-html");
+                        includeHTML();
+                    }
+                }
+                xhttp.open("GET", file, true);
+                xhttp.send();
+                return;
+            }
+        }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        includeHTML();
+    });
+    </script>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
